@@ -1,0 +1,49 @@
+computador={
+    "Computador 1":{
+        'id':205649,
+        'Marca':'Alien',
+        'Cores':['Branco','Preto','Azul'],
+        'Preço':10.000,
+        'Parcelas':{
+            '2x':5.000,
+            '6x':1666.65,
+            '12x':833.30
+        },
+        'Especificações':{
+            'Peso':'1,20',
+            'Tamanho':'28'
+        }
+    },
+    "Computador 2":{
+        'id':41846,
+        'Marca':'Del',
+        'Cores':['Branco','Verde'],
+        'Preço':3500,
+        'Parcelas':{
+            '2x':1750,
+            '6x':583.33,
+            '12x':291.66
+        },
+        'Especificações':{
+            'Peso':'1,58',
+            'Tamanho':'34'
+        }
+    },
+    "Computador 3":{
+        'id':345864,
+        'Marca':'Mac',
+        'Cores':['Preto','Branco'],
+        'Preço':20.000,
+        'Parcelas':{
+            '2x':10.000,
+            '6x':3.333,
+            '12x':1666.65
+        },
+        'Especificações':{
+            'Peso':'2,0',
+            'Tamanho':'30'
+        }
+    }
+}
+for x,y in computador.items():
+    print(x,':',y,'\n')
