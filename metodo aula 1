@@ -1,0 +1,54 @@
+import os
+def limpar():os.system('clear') or None
+
+def Ev():input('\n Enter para Voltar')
+
+
+conta= 2000.00
+def consultar():print('\n Conta: R$',conta)
+
+def sacar(): 
+    retirada = int(input('\n Quanto você deseja Sacar?: '))
+    limpar()
+    global conta 
+    conta -= retirada 
+    print('\n Saque Efetuado com Sucesso!')
+
+def depositar():int(input('\n Digite um valor para o Deposito: ')),limpar(),print('\n Deposito Concluido')
+
+loop=True
+loop2=True
+while loop:
+    limpar()
+    print ('\n ¬Baco\n')
+    User=input(' Nome: ')
+    Pass=int(input(' Senha: '))
+    if User=='gab' and Pass==123:
+        loop=False
+        while loop2:
+            limpar()
+            print('\n Bem vindo!')
+            entrar=int(input('\n 1- Sacar \n 2- Depositar\n 3- Consultar\n 4- Sair\n\n Didite o Numero que deseja acessar: '))
+            if entrar==3:
+                limpar()
+                consultar()
+                Ev()
+            elif entrar==1:
+                limpar()
+                sacar()
+                Ev()
+            elif entrar==2:
+                limpar()
+                depositar()
+                Ev()
+            elif entrar==4:
+                loop2=False
+                limpar()
+            else:
+                limpar()
+                input('\n Numero Incorreto\n\n Enter para Voltar')
+    else:
+        limpar()
+        input('\n Usuario ou Senha Incorreta\n\n Enter para Voltar')
+        
+    
