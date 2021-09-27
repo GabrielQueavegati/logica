@@ -1,0 +1,94 @@
+import os
+def cls():
+    os.system('clear') or None
+def p():
+    input('\n Enter para continuar ')
+    cls()
+def en():
+    input('\n Enter para voltar')
+def re():
+    print('\n Resultado = ',resultado)
+    
+#------------------------------------------------------------------------------------------
+def pot():
+    print('\n Potencia\n')
+    v1po=int(input(' Digite um numero: '))
+    v2po=int(input(' Digite outro numero: '))
+    return v1po + v2po
+def rdiv():
+    print('\n Resto de Divisão\n')
+    v1rd=int(input(' Digite um numero: '))
+    v2rd=int(input(' Digite outro numero: '))
+    return v1rd + v2rd
+def div():
+    print('\n Conta de Divisão\n')
+    v1di=int(input(' Digite um numero: '))
+    v2di=int(input(' Digite outro numero: '))
+    return v1di/v2di
+def mult():
+    print('\n Conta de Multiplicação\n')
+    v1mu=int(input(' Digite um numero: '))
+    v2mu=int(input(' Digite outro numero: '))
+    return v1mu*v2mu
+def sub():
+    print('\n Conta de Subtração\n')
+    v1su=int(input(' Digite um numero: '))
+    v2su=int(input(' Digite outro numero: '))
+    return v1su-v2su
+def soma():
+    print('\n Conta de Soma\n')
+    v1so=int(input(' Digite um numero: '))
+    v2so=int(input(' Digite outro numero: '))
+    return v1so+v2so
+#------------------------------------------------------------------------------------------
+loop=True
+
+while loop:
+    cls()
+    op=int(input('\n Aplicativo de Contas\n\n 1-Soma\n 2-Subtração\n 3-Multiplicação\n 4-Divisão\n 5-Resto de divisão\n 6-Potencia\n 7-Sair\n\n Digite aqui o numero\n que deseja entrar: '))
+    if op==1:
+        cls()
+        resultado=soma()
+        cls()
+        re()
+        en()
+    elif op==2:
+        cls()
+        resultado=sub()
+        cls()
+        re()
+        en()
+    elif op==3:
+        cls()
+        resultado=mult()
+        cls()
+        re()
+        en()
+    elif op==4:
+        cls()
+        resultado=div()
+        cls()
+        re()
+        en()
+    elif op==5:
+        cls()
+        resultado=rdiv()
+        cls()
+        re()
+        en()
+    elif op==6:
+        cls()
+        resultado=pot()
+        cls()
+        re()
+        en()
+    else:
+        loop=False
+        cls()
+
+
+
+
+
+
+    
