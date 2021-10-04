@@ -1,0 +1,33 @@
+import os
+import datetime
+Reg = {}
+
+def cls():
+    os.system('clear') or None
+def v():
+    input('\n\n Enter para Voltar')
+def idd():
+    globals Reg
+    print('\n Registre seus dados Aqui \n_________________________________')
+    nome=input('\n Nome: ')
+    cls()
+    placa=int(input('\n Numero da Placa: '))
+    cls()
+    carga=input('\n O que esta Transportando: ')
+    cls()
+    peso=int(input('\n Peso em Toneladas da Carga: '))
+    cls()
+    eixo=int(input('\n Quantas Rodas seu caminhão possui: '))
+    DeH=datetime.datetime.now()
+    cls()
+    print('\n Data e Hora do Resgistro',DeH.strftime("\n %x as %X"))
+    Reg["Nome"] = nome
+    Reg["Placa"] = placa
+    Reg["TipoDeCarga"] = carga
+    Reg['Peso'] = peso
+    Reg['Eixo'] = eixo
+    v()
+
+idd()
+
+https://www.w3schools.com/python/python_datetime.asp
