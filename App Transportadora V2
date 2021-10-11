@@ -1,0 +1,105 @@
+import os
+import datetime
+
+x = {}
+
+def cls():
+    os.system('clear') or None
+    
+def epv():
+    input('\n\n Enter para Voltar')
+    
+def idd():
+    global x
+    print('\n Registre seus dados Aqui \n_________________________________')
+    nome = input('\n Nome: ')
+    cls()
+    placa = input('\n Numero da Placa: ')
+    cls()
+    carga = input('\n O que esta Transportando: ')
+    cls()
+    peso = input('\n Peso em Toneladas da Carga: ')
+    cls()
+    roda = input('\n Quantas Rodas seu caminhão possui: ')
+    cls()
+    eixo= input('\n Quantos Eixos possui cada roda: ')
+    DeH = datetime.datetime.now()
+    cls()
+    print('\n Data e Hora do Resgistro',DeH.strftime("\n %x as %X"))
+    x["Nome"] = nome
+    x["Placa do Veiculo"] = placa
+    x["Tipo de Carga"] = carga
+    x['Peso em Toneladas'] = peso
+    x['Quantidade de Rodas'] = roda
+    x['Eixo de cada Roda'] = eixo
+    epv()
+    cls()
+
+def ver():
+    print('\n Dados Registrados\n')
+    for dr in x.items():
+        print(dr)
+    epv()
+    cls()
+
+def update():
+    atualizar=input('\n Qual area deseja Atualizar?\n\n 1- Seu Nome\n 2- Placa do Veículo\n 3- Material em Transporte\n 4- Peso em Toneladas da Carga\n 5- Quantidade de Rodas do Caminhão\n 6- Eixos das rodas\n\n Digite o Numero para Alteração: ')
+    if atualizar=='1':
+        cls()
+        A_nome=input('\n Atualizar Nome\n\n Digite seu Nome: ')
+        x.update({'Nome':A_nome})
+        cls()
+        print('\n Nome Atualizado com Sucesso!')
+        epv()
+        cls()
+    elif atualizar=='2':
+        cls()
+        A_placa=input('\n Atualizar Placa\n\n Digite o numero da Placa: ')
+        x.update({'Placa do Veiculo':A_placa})
+        cls()
+        print('\n Placa Atualizada com Sucesso!')
+        epv()
+        cls()
+    elif atualizar=='3':
+        cls()
+        A_carga=input('\n Atualizar Carga\n\n Digite o Material de Transporte: ')
+        x.update({'Tipo de Carga':A_carga})
+        cls()
+        print('\n Carga Atualizada com Sucesso!')
+        epv()
+        cls()
+    elif atualizar=='4':
+        cls()
+        A_peso=input('\n Atualizar Peso\n\n Digite o Peso em Toneladas: ')
+        x.update({'Peso em Toneladas':A_peso})
+        cls()
+        print('\n Peso Atualizado com Sucesso!')
+        epv()
+        cls()
+    elif atualizar=='5':
+        cls()
+        A_roda=input('\n Atualizar Quantidade\n\n Digite quantas rodas tem seu Caminhão: ')
+        x.update({'Quantidade de Rodas':A_roda})
+        cls()
+        print('\n Quantidade Atualizada com Sucesso!')
+        epv()
+        cls()
+    elif atualizar=='6':
+        cls()
+        A_eixo=input('\n Atualizar Eixo\n\n Digite o numero de Eixos das Rodas: ')
+        x.update({'Eixo de cada Roda':A_eixo})
+        cls()
+        print('\n Numero Atualizado com Sucesso!')
+        epv()
+        cls()
+    else:
+        cls()
+        print('\n Ops você digitou algo errado, tente novamente!')
+        epv()
+        cls()
+
+
+idd()
+ver()
+update()
+ver()
